@@ -1,0 +1,120 @@
+/* pc */
+.main{
+    display: flex;
+}
+.main-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add-task{
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 100%;
+    box-shadow: none;
+    font-size: 2rem;
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+}
+.tasks-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 12px;
+    padding: 1rem;
+}
+.task{
+    box-shadow: 2px 2px 2px 2px lightgray;
+    border-radius: 15px;
+    border: 2px solid #0AA1DD;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.task p{
+    font-size: clamp(1em, 1.6rem, 5vw);
+    padding: 6px;
+}
+.task p:nth-child(odd){
+    background-color: #79DAE8;
+}
+.task p:first-child{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.task p:last-child{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.task-creator{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    background-color: #0AA1DD;
+    margin-top: 12%;
+    padding: 12px;
+}
+.task-creator label{
+    font-size: clamp(1.25em, 1.6rem, 4.2vw);
+}
+select{
+    width: 30%;
+    font-size: clamp(1.25em, 1.6rem, 4.2vw);
+    outline: none;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    padding: 5px;
+}
+
+/* on moblie */
+@media screen and (max-width: 40em){
+    .main{
+        display: block;
+    }
+    .main-container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tasks-container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 1rem;
+    }
+    .task{
+        box-shadow: 2px 2px 2px 2px lightgray;
+        border-radius: 15px;
+        border: 2px solid #0AA1DD;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .task-creator{
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        background-color: #0AA1DD;
+        margin-top: 0;
+        padding: 12px;
+    }
+    .add-task{
+        right: 2rem;
+        bottom: 2rem;
+    }
+}
